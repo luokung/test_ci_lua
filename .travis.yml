@@ -1,9 +1,10 @@
-language: cpp
+language: lua
 
-addons:
-  apt:
-    packages:
-      - lua5.1
-      
+before_install:
+  - sudo luarocks install luacov-coveralls
+  
 script:
-  - lua main.lua
+  - lua -lluacov main.lua
+  
+after_success:
+  - luacov-coveralls
