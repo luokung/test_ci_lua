@@ -6,4 +6,4 @@ addons:
       - lua
       
 script:
-  -lua main.lua
+  - lua main.lua
