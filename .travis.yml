@@ -1,5 +1,10 @@
 language: lua
 
+addons:
+  apt:
+    packages:
+      - luarocks
+
 before_install:
   - sudo luarocks install luacov-coveralls
   
