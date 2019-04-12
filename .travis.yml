@@ -1,0 +1,4 @@
+language: python
+
+script:
+  -lua main.lua
