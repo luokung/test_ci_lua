@@ -3,7 +3,7 @@ language: cpp
 addons:
   apt:
     packages:
-      - lua
+      - lua5.1
       
 script:
   - lua main.lua
