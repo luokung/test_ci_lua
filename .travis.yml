@@ -4,12 +4,6 @@ addons:
   apt:
     packages:
       - luarocks
-      
-  sonarcloud:
-    organization: "luokung" # the key of the org you chose at step #3
-    token:
-      secure: "$SONAR_TOKEN" # encrypted value of your token
-
 
 before_install:
   - sudo luarocks install luacov-coveralls
@@ -19,4 +13,3 @@ script:
   
 after_success:
   - luacov-coveralls
-  - sonar-scanner
